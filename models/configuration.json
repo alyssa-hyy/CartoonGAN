@@ -1,0 +1,20 @@
+{
+   "framework": "tensorflow",
+   "task": "image-portrait-stylization",
+    "pipeline": {
+       "type": "unet-person-image-cartoon"
+    },
+    "train": {
+      "num_gpus": 1,
+      "batch_size": 32,
+      "adv_train_lr": 2e-4,
+      "max_steps": 300000,
+      "logging_interval": 1000,
+      "ckpt_period_interval": 1000,
+      "resume_epoch": 15999,
+      "patch_size": 256,
+      "work_dir": "exp_localtoon",
+      "photo": "/PATH/TO/PHOTO/DIR",
+      "cartoon": "/PATH/TO/CARTOON/DIR"
+    }
+}
